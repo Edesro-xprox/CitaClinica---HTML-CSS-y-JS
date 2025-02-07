@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clínica Salud - Lista de Pacientes</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles3.css">
 </head>
 <body>
     <header>
@@ -12,20 +13,36 @@
             <ul>
                 <li><a href="index1.html">Inicio</a></li>
                 <li><a href="index2.html">Registro de Cita</a></li>
-                <li><a href="index3.html">Lista de Pacientes</a></li>
+                <li><a href="index3.html" class="list">Lista de Pacientes</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="registros">
+        <section id="registers">
             <h2>Lista de Pacientes</h2>
             <div id="patientRecords">
                 <!-- Registros de pacientes aquí -->
+                <table class="tablePatients">
+                    <thead class="tableHead">
+                        <tr>
+                            <th>Paciente</th>
+                            <th>DNI</th>
+                            <th>Teléfono</th>
+                            <th>Correo electrónico</th>
+                            <th>Fecha de la Cita</th>
+                            <th>Especialidad</th>
+                            <th>Doctor Asignado</th>
+                            <th>Tipo de Consulta</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tableBody">
+                        
+                    </tbody>
             </div>
         </section>
     </main>
 
-    <script src="js/script.js"></script>
+    <script src="./js/logic.js"></script>
 </body>
 </html>

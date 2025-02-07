@@ -5,29 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Citas - Clínica Salud</title>
     <link rel="stylesheet" href="css/styless2.css">
+    <link rel="stylesheet" href="css/styles3.css">
 </head>
 <body>
     <!-- Menú de Opciones -->
-    <nav>
-        <ul>
-            <li><a href="index1.html">Inicio</a></li>
-            <li><a href="index2.html">Registro de Cita</a></li>
-            <li><a href="index3.html">Ver Registros</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index1.html">Inicio</a></li>
+                <li><a href="index2.html">Registro de Cita</a></li>
+                <li><a href="index3.html" class="list">Lista de Pacientes</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- Formulario de Registro de Cita -->
     <main>
         <form id="appointmentForm">
             <h2>Datos del Paciente</h2>
             <label for="patientName">Nombre Completo:</label>
-            <input type="text" id="patientName" name="patientName" required>
+            <input type="text" id="patientName" name="patientName" required maxlength="100">
 
             <label for="patientID">Número de Identificación:</label>
-            <input type="text" id="patientID" name="patientID" required>
+            <input type="text" id="patientID" name="patientID" required maxlength="8">
+            <span class="inValidFalse patientID">Número de identificación inválido</span>
 
             <label for="patientDOB">Fecha de Nacimiento:</label>
             <input type="date" id="patientDOB" name="patientDOB" required>
+            <span class="inValidFalse patientDOB">Fecha de nacimiento inválido</span>
 
             <label for="patientGender">Género:</label>
             <select id="patientGender" name="patientGender" required>
@@ -38,16 +43,20 @@
 
             <label for="patientPhone">Teléfono:</label>
             <input type="tel" id="patientPhone" name="patientPhone" required>
+            <span class="inValidFalse patientPhone">Teléfono inválido</span>
 
             <label for="patientEmail">Correo Electrónico:</label>
             <input type="email" id="patientEmail" name="patientEmail">
+            <span class="inValidFalse patientEmail">Correo inválido</span>
 
             <h2>Datos de la Cita</h2>
             <label for="appointmentDate">Fecha de la Cita:</label>
             <input type="date" id="appointmentDate" name="appointmentDate" required>
+            <span class="inValidFalse appointmentDate">Fecha de cita inválido, tiene que ser una fecha mayor a la actual</span>
 
             <label for="appointmentTime">Hora de la Cita:</label>
             <input type="time" id="appointmentTime" name="appointmentTime" required>
+            <span class="inValidFalse appointmentTime">Hora de la cita inválido</span>
 
             <label for="appointmentReason">Motivo de la Consulta:</label>
             <textarea id="appointmentReason" name="appointmentReason" required></textarea>
@@ -61,7 +70,7 @@
             </select>
 
             <label for="doctor">Doctor Asignado:</label>
-            <input type="text" id="doctor" name="doctor" required>
+            <input type="text" id="doctor" name="doctor" required maxlength="100">
 
             <label for="appointmentType">Tipo de Consulta:</label>
             <select id="appointmentType" name="appointmentType">
@@ -71,22 +80,26 @@
 
             <h2>Datos de la Secretaria</h2>
             <label for="secretaryName">Nombre de la Secretaria:</label>
-            <input type="text" id="secretaryName" name="secretaryName" required>
+            <input type="text" id="secretaryName" name="secretaryName" required maxlength="100">
 
             <label for="secretaryID">Código de Secretaria:</label>
-            <input type="text" id="secretaryID" name="secretaryID">
+            <input type="text" id="secretaryID" name="secretaryID" maxlength="10" required>
 
             <label for="registrationDate">Fecha de Registro:</label>
             <input type="date" id="registrationDate" name="registrationDate" required>
+            <span class="inValidFalse registrationDate">Fecha de registro inválido, tiene que ser la fecha actual</span>
 
             <label for="registrationTime">Hora de Registro:</label>
             <input type="time" id="registrationTime" name="registrationTime" required>
+            <span class="inValidFalse registrationTime">Hora de registro inválido</span>
 
             <label for="comments">Comentarios Adicionales:</label>
             <textarea id="comments" name="comments"></textarea>
 
-            <button type="submit">Registrar Cita</button>
+            <button type="submit" class="registerAppointment">Registrar Cita</button>
         </form>
     </main>
+
+    <script src="./js/logic.js"></script>
 </body>
 </html>

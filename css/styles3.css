@@ -1,0 +1,38 @@
+.inValidFalse{
+    display: none;
+}
+
+.inValidTrue{
+    display: block;
+    color: red;
+    font-size: 12px;
+}
+
+.inValidTrueInput{
+    margin-bottom: 10px;
+    border: 1px solid red;
+}
+
+.tablePatients{
+    margin-top: 3%;
+    width: 100%;
+    border: 2px solid #808080;
+    color: white;
+}
+
+.tableHead{
+    background-color: #004AAD;
+}
+
+.tableHead tr th{
+    padding: 1%;
+}
+
+.tableBody{
+    color: black;
+}
+
+.tableBody tr td{
+    padding: 0.5%;
+    border: 1px solid #808080;
+}

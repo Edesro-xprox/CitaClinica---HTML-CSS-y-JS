@@ -1,34 +1,38 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f4f7f9;
     color: #333;
     margin: 0;
     padding: 0;
 }
 
+header {
+    background-color: #004aad;
+    padding: 10px 0;
+    text-align: center;
+}
+
 nav {
     background-color: #004aad;
-    padding: 10px;
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin: 0;
     padding: 0;
 }
 
 nav ul li {
-    margin: 0;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
-    padding: 10px 20px;
-    display: block;
-    font-weight: bold;
+    font-size: 18px;
+    padding: 5px 10px;
     transition: background-color 0.3s;
 }
 
